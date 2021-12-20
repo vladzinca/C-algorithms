@@ -110,16 +110,8 @@ int main()
                     for (int k = 0; k < V[i]; k++)
                         for (int l = 0; l < V[i]; l++)
                             b1[k][l] = b[k][l];
-                    if (j2 < j1)                                    // }
-                    {                                               // }
-                        stergeLinie(b1, V[i], liniiInitiale[j1]);   // }
-                        stergeLinie(b1, V[i], liniiInitiale[j2]);   // }
-                    }                                               // } O(k *
-                    else                                            // } V[i]^4)
-                    {                                               // }
-                        stergeLinie(b1, V[i], liniiInitiale[j2]);   // }
-                        stergeLinie(b1, V[i], liniiInitiale[j1]);   // }
-                    }                                               // }
+                    stergeLinie(b1, V[i], liniiInitiale[j2]); // } O(k * V[i]^4)
+                    stergeLinie(b1, V[i], liniiInitiale[j1]); // }
                     if (compareMatrix(a, K2, b1))
                     {
                         for (int k = 0; k < V[i]; k++)
